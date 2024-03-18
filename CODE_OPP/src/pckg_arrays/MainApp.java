@@ -37,7 +37,6 @@ public class MainApp {
         }else {
             System.out.println("Out of bounds");
         }
-
     }
 
 }
