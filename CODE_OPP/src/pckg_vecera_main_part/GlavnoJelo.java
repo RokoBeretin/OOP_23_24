@@ -8,7 +8,7 @@ public class GlavnoJelo {
         System.out.println("Spremljeno GAS !!!! i servirano !!!!");
 
     }
-    float totalPrice(){
+    public float totalPrice(){
         return ThreadLocalRandom.current().nextFloat(50.5f, 250.8f);
     }
 }

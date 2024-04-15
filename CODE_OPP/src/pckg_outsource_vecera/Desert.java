@@ -2,8 +2,8 @@ package pckg_outsource_vecera;
 
 public class Desert {
 
-    String naziv;
-    int kol;
+    private String naziv;
+    private int kol;
 
 
     public Desert(String naziv, int kol){
@@ -11,7 +11,7 @@ public class Desert {
         this.naziv = naziv;
     }
 
-    void infoDesert(){
+    public void infoDesert(){
         System.out.println(this);
     }
 
