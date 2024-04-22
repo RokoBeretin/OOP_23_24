@@ -1,11 +1,12 @@
 package pckg_vjezba;
 
 import java.text.DateFormat;
+import java.util.Date;
 
 public class PDS_Student extends Student{
 
-    protected PDS_Student(DateFormat dateFormat, String name, int idStudnet, int cntStudents) {
-        super(dateFormat, name, idStudnet, cntStudents);
+    protected PDS_Student(String name) {
+        super(name);
     }
 
     @Override

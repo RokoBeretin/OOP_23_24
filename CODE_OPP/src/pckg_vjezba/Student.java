@@ -1,6 +1,7 @@
 package pckg_vjezba;
 
 import java.text.DateFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
@@ -14,33 +15,26 @@ public abstract class Student {
 
     Scanner sc = new Scanner(System.in);
 
-    protected Student(String name, int idStudnet, int cntStudents) {
+    protected Student(String name) {
         this.name = name;
-        this.idStudnet = idStudnet+5;
-        this.cntStudents = cntStudents++;
+        this.idStudnet = idStudnet + cntStudents;
+        this.enrolmentDate = enrolmentDate;
+        cntStudents++;
 
     }
 
-    protected void setEnrollmentDate() throws ParseException {
+    protected void setEnrollmentDate() throws ParseException, ParseException {
         System.out.println("Please enter enrollment data in the format dd-MM-yyy");
         String date = sc.nextLine();
         this.enrolmentDate = DATE_FORMAT.parse(date);
     }
 
     public void infoStudent(){
-        System.out.println(this);
+        System.out.println("Student: " + this.name + " - id: " + this.idStudnet);
+        System.out.println("Student enrolment date - " + enrolmentDate.toString());
 
     }
     public abstract void completedStudy(int numStudys);
 
-    @Override
-    public String toString() {
-        return "Student{" +
-                "DATE_FORMAT=" + DATE_FORMAT +
-                ", enrolmentDate=" + enrolmentDate +
-                ", name='" + name + '\'' +
-                ", idStudnet=" + idStudnet +
-                ", cntStudents=" + cntStudents +
-                '}';
-    }
+
 }
