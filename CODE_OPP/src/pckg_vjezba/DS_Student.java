@@ -11,7 +11,7 @@ public class DS_Student extends Student{
 
     @Override
     public void completedStudy(int numStudys) {
-        System.out.println(this.name + "has completed: " + numStudys);
+        System.out.println(this.name + " has completed: " + numStudys);
 
     }
 }

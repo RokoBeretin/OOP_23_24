@@ -10,7 +10,7 @@ public class Client {
         System.out.println(st2);
         DS_Student st3 = new DS_Student("sajd");
         System.out.println(st3);
-        st3.setEnrollmentDate();
+        st3.completedStudy(3);
         st3.infoStudent();
 
 
